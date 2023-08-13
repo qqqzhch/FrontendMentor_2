@@ -1,17 +1,23 @@
 @import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
-body{
-    
-    
-}
+@Primary-color-Darkcyan:  hsl(158, 36%, 37%); // sea blue
+@Primary-color-Cream:hsl(30, 38%, 92%);
+
+@Neutral-color-Verydarkblue:hsl(212, 21%, 14%);
+@Neutral-color-Darkgrayishblue:hsl(228, 12%, 48%);
+@Neutral-color-White:hsl(0, 0%, 100%);
+   
+
 main{
-    background-color: #f3eae3;
+    background-color: @Primary-color-Cream;
     height: 100vh;
     display: flex;
     width: 100vw;
+   
+    //     font-family: 'Fraunces', serif;
     
-    
-
 
 }
 
@@ -22,8 +28,8 @@ main{
     height: 80%;
     margin: auto;
     display:flex;
-    border: 1px solid whitesmoke;
-    background-color: white;
+    border: 1px solid @Neutral-color-White;
+    background-color: @Neutral-color-White;
     flex-direction: row;
     border-radius: 15px;
     
@@ -47,10 +53,12 @@ main{
         box-sizing: border-box;
         padding:30px 45px 30px 45px  ;
         h4{
-            color: rgb(131, 131, 131);
+            color: @Neutral-color-Darkgrayishblue;
             letter-spacing: 10px;
             text-transform: uppercase;
             margin-bottom: 0px;
+            font-family: 'Montserrat', sans-serif;
+       
             
             
 
@@ -58,12 +66,16 @@ main{
         h1{
             font-weight:900;
             font-size: 45px;
+            color: @Neutral-color-Verydarkblue;
+            font-family: 'Fraunces', serif;
+            letter-spacing: 1px;
+            line-height: 45px;
 
         }
         p{
             line-height: 25px;
             letter-spacing:2px;
-            color:rgb(69, 67, 67);
+            color:@Neutral-color-Darkgrayishblue;
 
         }
         div{
@@ -71,13 +83,13 @@ main{
             flex-direction: row;
             align-items: center;
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
 
             >div:first-child{
                 width: 60%;
                 font-weight: bolder;
                 font-size: 40px;
-                color: green;
+                color: @Primary-color-Darkcyan;
             }
             >div:last-child{
              text-decoration: line-through;
@@ -86,17 +98,20 @@ main{
                   
         }
         button{
-            background-color: green;
-            color: white;
+            background-color: @Primary-color-Darkcyan;
+            color: @Neutral-color-White;
             padding: 15px;
             border-radius: 10px;
+            border-color: @Primary-color-Darkcyan;
+            //Neutral-color-Darkgrayishblue
+            box-shadow: 2px 2px 2px @Neutral-color-White;
 
         }
 
     }        
     
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1124px) {
 
     main{
         height: 100%;
